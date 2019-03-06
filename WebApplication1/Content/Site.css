@@ -231,6 +231,18 @@ body {
 width:100%;
 }
 
-
+.containerSchedules {
+    padding-bottom: 100px;
+    padding-right: 100px;
+    padding-left: 100px;
+    padding-top:10px;
+    font-family: 'Raleway',Arial,sans-serif;
+    height: 100%;
+	margin-top:80px;
+	min-height:450px;
+	min-width: 100%;
+    align-items: center;
+    justify-content: center;
+}
 
 

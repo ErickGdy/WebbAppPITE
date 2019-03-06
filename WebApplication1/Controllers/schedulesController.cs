@@ -17,7 +17,7 @@ namespace WebApplication1.Controllers
         // GET: schedules
         public ActionResult Index()
         {
-            return View(db.schedules.ToList());
+            return View(db.schedules.OrderBy(s => s.Date).ToList());
         }
 
         // GET: schedules/Details/5
@@ -38,7 +38,10 @@ namespace WebApplication1.Controllers
         // GET: schedules/Create
         public ActionResult Create()
         {
-            return View();
+            schedule model = new schedule();
+            model.Date = DateTime.Today;
+            model.Hour = DateTime.Now.TimeOfDay;
+            return View(model);
         }
 
         // POST: schedules/Create

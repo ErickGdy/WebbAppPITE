@@ -1,0 +1,56 @@
+﻿@model WebApplication1.Models.schedule
+
+@{
+	ViewBag.Title = "Agregar Cita";
+}
+
+   
+	<div class="containerSchedules">
+		<h3>Agendar Cita Nueva</h3>
+		@using (Html.BeginForm())
+		{
+			@Html.AntiForgeryToken()
+
+			<div class="form-horizontal">
+				<hr />
+				@Html.ValidationSummary(true, "", new { @class = "text-danger" })
+				<div class="form-group">
+					@Html.LabelFor(model => model.ClientName, htmlAttributes: new { @class = "control-label col-md-3" })
+					<div class="col-md-9">
+						@Html.EditorFor(model => model.ClientName, new { htmlAttributes = new { @class = "form-control" } })
+						@Html.ValidationMessageFor(model => model.ClientName, "", new { @class = "text-danger" })
+					</div>
+				</div>
+
+				<div class="form-group">
+					@Html.LabelFor(model => model.Date, htmlAttributes: new { @class = "control-label col-md-3" })
+					<div class="col-md-9">
+						@Html.EditorFor(model => model.Date, new { htmlAttributes = new { @class = "form-control", @min = DateTime.Now.ToString("yyyy-MM-dd")} })
+						@Html.ValidationMessageFor(model => model.Date, "", new { @class = "text-danger" })
+					</div>
+				</div>
+
+				<div class="form-group">
+					@Html.LabelFor(model => model.Hour, htmlAttributes: new { @class = "control-label col-md-3" })
+					<div class="col-md-9">
+						@Html.EditorFor(model => model.Hour, new { htmlAttributes = new { @class = "form-control" } })
+						@Html.ValidationMessageFor(model => model.Hour, "", new { @class = "text-danger" })
+					</div>
+				</div>
+
+				<div class="form-group">
+					<div class="col-md-offset-3 col-md-9">
+						<input type="submit" value="Agregar" class="btn btn-success" />
+					</div>
+				</div>
+			</div>
+		}
+
+		<div>
+			@Html.ActionLink("Volver a Lista de Citas", "Index")
+		</div>
+		</div>
+@section Scripts {
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/jqueryval")
+}
