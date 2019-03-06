@@ -159,6 +159,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\schedulesController.cs" />
     <Compile Include="Controllers\servicesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -177,6 +178,9 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dbModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\schedule.cs">
+      <DependentUpon>dbModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\service.cs">
       <DependentUpon>dbModel.tt</DependentUpon>
@@ -237,17 +241,22 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\services\Create.cshtml" />
     <Content Include="Views\services\Delete.cshtml" />
     <Content Include="Views\services\Details.cshtml" />
     <Content Include="Views\services\Edit.cshtml" />
     <Content Include="Views\services\Index.cshtml" />
+    <Content Include="Views\schedules\Create.cshtml" />
+    <Content Include="Views\schedules\Delete.cshtml" />
+    <Content Include="Views\schedules\Details.cshtml" />
+    <Content Include="Views\schedules\Edit.cshtml" />
+    <Content Include="Views\schedules\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\fonts\" />
+    <Folder Include="Content\img\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
