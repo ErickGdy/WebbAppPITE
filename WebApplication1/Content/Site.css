@@ -1,0 +1,236 @@
+﻿/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.menuCustom {
+    max-height: 90px;
+    vertical-align: middle;
+}
+
+.imgMenu {
+    height: 80px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#menuOpcion {
+    font-size: 25px;
+	align-items:center;
+    color: white;
+   font-family: 'Raleway',Arial,sans-serif;
+   padding-top:30px;
+   display: inline-block;
+}
+.iconMenu {
+	font-size: 30px;
+	padding-left:10px;
+}
+
+#menuOpcion:hover {
+    color: #b3e6ff;
+}
+
+.contenido {
+    padding-top: 100px;
+}
+
+.logo {
+    height: 300px;
+    display: flex;
+    margin: 0 auto 0 auto;
+}
+
+h1 {
+    text-align: center;
+    color: #0849AE;
+}
+
+h2 {
+    text-align: left;
+    color: #EE412E;
+    font-size: 35px;
+}
+
+h3 {
+    font-family: 'Raleway',Arial,sans-serif;
+    text-align: left;
+    color: #0849AE;
+    font-size: 20px;
+}
+
+body {
+    font-family: 'Raleway',Bree Serif,Arial,sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.tabla {
+    max-width: 1000px;
+    display: block;
+    margin: 0 auto 0 auto;
+}
+
+#Inicio {
+    padding: 100px;
+    font-family: 'Raleway',Arial,sans-serif;
+    display: inherit;
+    height: 100%;
+    position: relative;
+}
+
+#CoverSeccion {
+	width: 100%;
+	min-height: 600px;
+    background-image: url('../Content/img/coverImg.jpg');
+    -webkit-background-origin: border-box;
+	background-color: #cccccc;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	padding-top:300px;
+	margin-top:40px;
+	text-align: center;
+	vertical-align: middle;
+}
+#coverText {
+	color: white;
+    font-size: 80px;
+	font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#Nosotros {
+	width: 100%;
+	min-height: 400px;
+    background-image: url('../Content/img/barbershop.jpg');
+    -webkit-background-origin: border-box;
+	margin-top:300px;
+	background-color: #cccccc;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	padding-top:100px;
+}
+#nosotrosText {
+	color: white;
+	font-size: 15px;
+}
+
+#Servicios {
+    padding: 100px;
+    position: relative;
+}
+
+#botonGigante {
+    padding: 30px;
+	width:400px;
+	text-align: center;
+	vertical-align: middle;
+	color: white;
+	font-size: 40px;
+	margin-top:20px;
+}
+
+.botonGigante {
+    height: 100px;
+    width:200px;
+    font-size:30px;
+}
+
+.tabla {
+    align-items: center;
+    justify-content: center;
+}
+
+.alertaValidador {
+    color: red;
+    font-size: 10px;
+    padding-right: 25px;
+    text-align: center;
+    font-family: "Open Sans", "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.mensaje {
+    font-size: 15px;
+}
+
+.campoTexto {
+    color: black;
+    font-size: 15px;
+    width: 100%;
+}
+
+.boton {
+    align-items: center;
+    /*display: inline-block;*/
+    justify-content: center;
+    text-align: center;
+    font-family: "Open Sans", "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+
+
+
+.footer {
+    width: 100%;
+	height: 50px;
+	 position: absolute;
+	  right: 0;
+	  bottom: 0;
+	  left: 0;
+	  padding-top:50px;
+	  display: block;
+}
+.footerContent {
+	background-color: #212223;
+	color: white;
+	text-align: center;
+    color: white;
+	padding:5px;
+}
+
+.icono {
+    font-size: 20px;
+    text-indent: 20px;
+}
+
+.Forms {
+    padding-bottom: 100px;
+    padding-top:10px;
+    font-family: 'Raleway',Arial,sans-serif;
+    height: 100%;
+}
+.containerServices {
+    padding-bottom: 100px;
+    padding-right: 100px;
+    padding-left: 100px;
+    padding-top:10px;
+    font-family: 'Raleway',Arial,sans-serif;
+    height: 100%;
+	margin-top:80px;
+	min-height:450px;
+	min-width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.text-area-field {
+	min-width:325px;
+	min-height:80px;
+}
+.form-control {
+width:100%;
+}
+
+
+
+
