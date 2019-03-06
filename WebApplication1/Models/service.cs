@@ -11,12 +11,21 @@ namespace WebApplication1.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class service
     {
         public int ID { get; set; }
+        [Display(Name = "Nombre")]
+        [Required(ErrorMessage ="Ingrese Nombre")]
         public string Name { get; set; }
+        [Display(Name = "Descripción")]
+        [Required(ErrorMessage ="Ingrese Descripción")]
+        [DataType(DataType.MultilineText)]
         public string Description { get; set; }
-        public Nullable<decimal> Price { get; set; }
+        [Required(ErrorMessage ="Ingrese Precio")]
+        [Display(Name = "Precio")]
+        [DisplayFormat(DataFormatString = "{0:n2}", ApplyFormatInEditMode = true)]
+        public decimal Price { get; set; }
     }
 }

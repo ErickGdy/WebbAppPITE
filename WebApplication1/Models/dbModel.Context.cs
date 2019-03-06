@@ -26,5 +26,6 @@ namespace WebApplication1.Models
         }
     
         public virtual DbSet<service> services { get; set; }
+        public virtual DbSet<schedule> schedules { get; set; }
     }
 }

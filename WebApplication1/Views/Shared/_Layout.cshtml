@@ -6,38 +6,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - Mi aplicación ASP.NET</title>
     @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
+    	@Scripts.Render("~/bundles/modernizr")
+	<link href="~/Content/Site.css" rel="stylesheet" />
+	<link href="~/Content/fonts/font-awesome.min.css" rel="stylesheet" />
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Nombre de aplicación", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Inicio", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Acerca de", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contacto", "Contact", "Home")</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - Mi aplicación ASP.NET</p>
-        </footer>
-    </div>
+	<!--<img class="img-wrapper" src="../Contenido/img/Logo.png" />-->
+	<nav class="navbar navbar-inverse navbar-fixed-top menuCustom">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<img class="imgMenu" src="~/Content/img/LogoMenu2.fw.png"/>
+				<a class="navbar-brand"></a>
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menuColapsado">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</div>
+			<div class="collapse navbar-collapse" id="menuColapsado">
+				<a href="@Url.Action("Index","Home")" id="menuOpcion"><span class="fa fa-home iconMenu pull-left" aria-hidden="true"></span></a>
+				<ul class="nav navbar-nav pull-right">
+					<li>
+						<a href="@Url.Action("Index","services")" id="menuOpcion">Servicios</a>
+					</li>
+					<li>
+						<a href="@Url.Action("Index","schedules")" id="menuOpcion">Citas</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<div>
+		<div>
+			<!--<div class="container body-content">
+				<div class="container body-content">-->
+			@RenderBody()
+			<hr />
+			<!--footer-->
+			<div class="footer">
+				<div class="footerContent">
+					<a href="#" class="icono"><i class="fa fa-twitter"></i></a>
+					<a href="#" class="icono"><i class="fa fa-facebook"></i></a>
+					<a href="#" class="icono"><i class="fa fa-google-plus"></i></a>
+					<br />
+					<p>Erick Andres Godoy De Anda ©2019 Copyright</p>
+				</div>
+			</div>
+		</div>
+	</div>
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
+		@Scripts.Render("~/bundles/jquery")
+		@Scripts.Render("~/bundles/bootstrap")
+		@RenderSection("scripts", required: false)
 </body>
 </html>
